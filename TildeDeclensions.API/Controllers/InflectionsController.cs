@@ -9,9 +9,9 @@ namespace TildeDeclensions.Controllers
     public class InflectionsController : ControllerBase
     {
         private IDeclensionHandler _handler;
-        public InflectionsController(Func<IDeclensionHandler> handlerFactory)
+        public InflectionsController(IDeclensionHandler handler)
         {
-            _handler = handlerFactory();
+            _handler = handler;
         }
 
         [HttpGet]

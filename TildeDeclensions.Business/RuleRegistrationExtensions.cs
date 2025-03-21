@@ -6,12 +6,12 @@ namespace TildeDeclensions.Business
     {
         public static IServiceCollection AddRules(this IServiceCollection services)
         {
-            services.AddTransient<AdjectiveComparativeDeclensionRule001>();
+            services.AddSingleton<AdjectiveComparativeDeclensionRule001>();
 
-            services.AddTransient<FirstDeclensionRule001>();
-            services.AddTransient<FirstDeclensionRule002>();
+            services.AddSingleton<FirstDeclensionRule001>();
+            services.AddSingleton<FirstDeclensionRule002>();
 
-            services.AddTransient<FourthDeclensionRule001>();
+            services.AddSingleton<FourthDeclensionRule001>();
 
             return services;
         }
