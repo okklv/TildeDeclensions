@@ -42,7 +42,7 @@ namespace TildeDeclensions.Business.Tests.Rules
         [InlineData("VecA")]
         public void Rule001_Evaluate_ShouldReturnTrue_WhenWordEndsWithAInDifferentCasing(string word)
         {
-            var rule = new FirstDeclensionRule002();
+            var rule = new FourthDeclensionRule001();
             var result = rule.Evaluate(word);
             Assert.True(result);
         }

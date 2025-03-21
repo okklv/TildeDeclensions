@@ -6,7 +6,7 @@
         private const string NECESSARY_SUFFIX = "a";
         public bool Evaluate(string word)
         {
-            return word.EndsWith(NECESSARY_SUFFIX);
+            return word.EndsWith(NECESSARY_SUFFIX, StringComparison.OrdinalIgnoreCase);
         }
     }
 }
