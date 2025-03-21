@@ -1,0 +1,6 @@
+@TildeDeclensions_HostAddress = http://localhost:5082
+
+GET {{TildeDeclensions_HostAddress}}/inflections/
+Accept: application/json
+
+###
