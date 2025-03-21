@@ -10,8 +10,11 @@ namespace TildeDeclensions.Business.Tests.Rules
         [InlineData("dziesma")]
         public void Rule001_Evaluate_ShouldReturnTrue_WhenWordEndsWithA(string word)
         {
+            // Arrange
             var rule = new FourthDeclensionRule001();
+            // Act
             var result = rule.Evaluate(word);
+            // Assert
             Assert.True(result);
         }
 
@@ -21,8 +24,11 @@ namespace TildeDeclensions.Business.Tests.Rules
         [InlineData("galds")]
         public void Rule001_Evaluate_ShouldReturnFalse_WhenWordDoesNotEndWithA(string word)
         {
+            // Arrange
             var rule = new FourthDeclensionRule001();
+            // Act
             var result = rule.Evaluate(word);
+            // Assert
             Assert.False(result);
         }
 
@@ -31,8 +37,11 @@ namespace TildeDeclensions.Business.Tests.Rules
         [InlineData(null)]
         public void Rule001_Evaluate_ShouldReturnFalse_WhenWordIsNullOrEmpty(string word)
         {
+            // Arrange
             var rule = new FourthDeclensionRule001();
+            // Act
             var result = rule.Evaluate(word ?? "");
+            // Assert
             Assert.False(result);
         }
 
@@ -42,8 +51,11 @@ namespace TildeDeclensions.Business.Tests.Rules
         [InlineData("VecA")]
         public void Rule001_Evaluate_ShouldReturnTrue_WhenWordEndsWithAInDifferentCasing(string word)
         {
+            // Arrange
             var rule = new FourthDeclensionRule001();
+            // Act
             var result = rule.Evaluate(word);
+            // Assert
             Assert.True(result);
         }
     }

@@ -11,8 +11,11 @@ namespace TildeDeclensions.Business.Tests.Rules
         [InlineData("vecāks")]
         public void Rule001_Evaluate_ShouldReturnTrue_WhenWordEndsWithAks(string word)
         {
+            // Arrange
             var rule = new AdjectiveComparativeDeclensionRule001();
+            // Act
             var result = rule.Evaluate(word);
+            // Assert
             Assert.True(result);
         }
 
@@ -22,8 +25,11 @@ namespace TildeDeclensions.Business.Tests.Rules
         [InlineData("grāmata")]
         public void Rule001_Evaluate_ShouldReturnFalse_WhenWordDoesNotEndWithAks(string word)
         {
+            // Arrange
             var rule = new AdjectiveComparativeDeclensionRule001();
+            // Act
             var result = rule.Evaluate(word);
+            // Assert
             Assert.False(result);
         }
 
@@ -32,8 +38,11 @@ namespace TildeDeclensions.Business.Tests.Rules
         [InlineData(null)]
         public void Rule001_Evaluate_ShouldReturnFalse_WhenWordIsNullOrEmpty(string word)
         {
+            // Arrange
             var rule = new AdjectiveComparativeDeclensionRule001();
+            // Act
             var result = rule.Evaluate(word ?? "");
+            // Assert
             Assert.False(result);
         }
 
@@ -43,8 +52,11 @@ namespace TildeDeclensions.Business.Tests.Rules
         [InlineData("VecāKs")]
         public void Rule001_Evaluate_ShouldReturnTrue_WhenWordEndsWithAksInDifferentCasing(string word)
         {
+            // Arrange
             var rule = new AdjectiveComparativeDeclensionRule001();
+            // Act
             var result = rule.Evaluate(word);
+            // Assert
             Assert.True(result);
         }
         #endregion

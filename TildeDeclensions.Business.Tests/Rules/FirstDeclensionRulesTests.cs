@@ -12,11 +12,11 @@ namespace TildeDeclensions.Business.Tests.Rules
         [InlineData("koks")]
         public void Rule001_Evaluate_ShouldReturnTrue_WhenWordEndsWithS(string word)
         {
-            //Arrange
+            // Arrange
             var rule = new FirstDeclensionRule001();
-            //Act
+            // Act
             var result = rule.Evaluate(word);
-            //Assert
+            // Assert
             Assert.True(result);
         }
 
@@ -26,11 +26,11 @@ namespace TildeDeclensions.Business.Tests.Rules
         [InlineData("grāmata")]
         public void Rule001_Evaluate_ShouldReturnFalse_WhenWordDoesNotEndWithS(string word)
         {
-            //Arrange
+            // Arrange
             var rule = new FirstDeclensionRule001();
-            //Act
+            // Act
             var result = rule.Evaluate(word);
-            //Assert
+            // Assert
             Assert.False(result);
         }
 
@@ -39,11 +39,11 @@ namespace TildeDeclensions.Business.Tests.Rules
         [InlineData(null)]
         public void Rule001_Evaluate_ShouldReturnFalse_WhenWordIsNullOrEmpty(string word)
         {
-            //Arrange
+            // Arrange
             var rule = new FirstDeclensionRule001();
-            //Act
+            // Act
             var result = rule.Evaluate(word ?? "");
-            //Assert
+            // Assert
             Assert.False(result);
         }
 
@@ -53,8 +53,11 @@ namespace TildeDeclensions.Business.Tests.Rules
         [InlineData("VecS")]
         public void Rule001_Evaluate_ShouldReturnTrue_WhenWordEndsWithSInDifferentCasing(string word)
         {
+            // Arrange
             var rule = new FirstDeclensionRule001();
+            // Act
             var result = rule.Evaluate(word);
+            // Assert
             Assert.True(result);
         }
 
@@ -67,11 +70,11 @@ namespace TildeDeclensions.Business.Tests.Rules
         [InlineData("vecāks")]
         public void Rule002_Evaluate_ShouldReturnFalse_WhenWordEndsWithAks(string word)
         {
-            //Arrange
+            // Arrange
             var rule = new FirstDeclensionRule002();
-            //Act
+            // Act
             var result = rule.Evaluate(word);
-            //Assert
+            // Assert
             Assert.False(result);
         }
 
@@ -81,11 +84,11 @@ namespace TildeDeclensions.Business.Tests.Rules
         [InlineData("koks")]
         public void Rule002_Evaluate_ShouldReturnTrue_WhenWordEndsWithS(string word)
         {
-            //Arrange
+            // Arrange
             var rule = new FirstDeclensionRule001();
-            //Act
+            // Act
             var result = rule.Evaluate(word);
-            //Assert
+            // Assert
             Assert.True(result);
         }
 
@@ -94,11 +97,11 @@ namespace TildeDeclensions.Business.Tests.Rules
         [InlineData(null)]
         public void Rule002_Evaluate_ShouldReturnFalse_WhenWordIsNullOrEmpty(string word)
         {
-            //Arrange
+            // Arrange
             var rule = new FirstDeclensionRule001();
-            //Act
+            // Act
             var result = rule.Evaluate(word ?? "");
-            //Assert
+            // Assert
             Assert.False(result);
         }
 
@@ -108,8 +111,11 @@ namespace TildeDeclensions.Business.Tests.Rules
         [InlineData("VecS")]
         public void Rule002_Evaluate_ShouldReturnTrue_WhenWordEndsWithSInDifferentCasing(string word)
         {
+            // Arrange
             var rule = new FirstDeclensionRule002();
+            // Act
             var result = rule.Evaluate(word);
+            // Assert
             Assert.True(result);
         }
         #endregion
